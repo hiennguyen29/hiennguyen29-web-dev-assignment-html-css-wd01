@@ -1,0 +1,185 @@
+@use "_variables" as v;
+
+// style the header
+header {
+  background-color: v.$background-colour;
+  color: v.$white;
+  height: 150px;
+  padding: 30px;
+  margin-bottom: 20px;
+
+  // style header nav menu
+  .menu {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+
+    //   style header logo
+    .menu-logo {
+      font-size: 2em;
+      margin: 0;
+    }
+
+    //   style the menu list
+    .menu-list {
+      display: flex;
+      list-style-type: none;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin-right: 0;
+        &:not(:last-child) {
+          margin-right: 20px;
+        }
+
+        a {
+          color: v.$white;
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: 600;
+          padding: 10px;
+
+          &:hover {
+            color: v.$primary-colour-hover;
+          }
+        }
+      }
+    }
+  }
+}
+
+// Style "about" section
+section.about {
+  margin-bottom: 50px;
+}
+
+// Style "hightlight posts articles" using Grid display and other inner elements
+section.hightlight {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 0px;
+
+  article {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: v.$gap;
+    justify-content: end;
+    align-content: space-evenly;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: v.$background-colour-2;
+
+    p {
+      color: v.$primary-colour;
+      padding: 10px;
+      margin: 0;
+    }
+  }
+}
+
+// style div section in the destination page here
+.destination {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  justify-items: center;
+
+  .photo-destination {
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: v.$background-colour-2;
+    border: 1px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: v.$background-colour-2;
+
+    .destination-description {
+      padding: 15px;
+
+      p {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+//   style form in the Contact page here
+.contact-heading {
+  margin-bottom: 30px;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: v.$gap;
+  background-color: v.$background-colour-2;
+  padding: 20px 80px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  @media (max-width: 1200px) {
+    background-color: v.$background-colour;
+  }
+  @media (min-width: 600px) {
+    background-color: v.$background-colour-2;
+  }
+
+  // style the contact form div
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+
+  input[type="submit"] {
+    background-color: v.$background-colour;
+    color: v.$white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: 20px;
+  }
+
+  input[type="submit"]:hover {
+    color: v.$secondary-colour-hover;
+    background-color: v.$black;
+  }
+
+  // style the location div
+  .contact-location {
+    iframe {
+      border-color: v.$black;
+      border-radius: 8px;
+      @media (max-width: 600px) {
+        .contact-section,
+        .contact-location {
+          padding: 15px;
+        }
+
+        .contact-location iframe {
+          height: 150px;
+        }
+      }
+    }
+  }
+}

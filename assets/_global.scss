@@ -1,0 +1,65 @@
+@use "_variables" as v;
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: v.$background-colour-2;
+  font-family: v.$primary-font-family;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+button {
+  color: v.$white;
+  font-weight: 600;
+  font-size: 0.8em;
+  background-color: v.$background-colour;
+  width: max-content;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.85em;
+  &:hover {
+    color: v.$primary-colour-hover;
+  }
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+h2::before {
+  content: "🌳";
+}
+
+
+footer {
+  background-color: v.$background-colour;
+  color: v.$white;
+  padding: 30px;
+  width: 100%;
+  p {
+    text-align: center;
+  }
+}

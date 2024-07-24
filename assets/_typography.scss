@@ -1,0 +1,19 @@
+@use "_variables" as v;
+
+h1 {
+    color:v.$black;
+    text-align: center;
+    text-transform: capitalize;
+    font-size:2em;
+}
+
+p {
+    font-size:1em;
+    text-align: justify;
+}
+
+a {
+    text-decoration: none;
+}
+
+

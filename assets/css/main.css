@@ -1,0 +1,241 @@
+@charset "UTF-8";
+@import url("//fonts.googleapis.com/css?family=Open+Sans:300,400,600,700");
+header {
+  background-color: #65cb77;
+  color: #f5f3ed;
+  height: 150px;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+header .menu {
+  display: flex;
+  height: 100%;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 960px;
+  margin: 0 auto;
+}
+header .menu .menu-logo {
+  font-size: 2em;
+  margin: 0;
+}
+header .menu .menu-list {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+header .menu .menu-list li {
+  margin-right: 0;
+}
+header .menu .menu-list li:not(:last-child) {
+  margin-right: 20px;
+}
+header .menu .menu-list li a {
+  color: #f5f3ed;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px;
+}
+header .menu .menu-list li a:hover {
+  color: #0f0e2e;
+}
+
+section.about {
+  margin-bottom: 50px;
+}
+
+section.hightlight {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 0px;
+}
+section.hightlight article {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  justify-content: end;
+  align-content: space-evenly;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ede6e6;
+}
+section.hightlight article p {
+  color: #6f7944;
+  padding: 10px;
+  margin: 0;
+}
+
+.destination {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  justify-items: center;
+}
+.destination .photo-destination {
+  padding-bottom: 30px;
+  text-align: center;
+  background-color: #ede6e6;
+  border: 1px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #ede6e6;
+}
+.destination .photo-destination .destination-description {
+  padding: 15px;
+}
+.destination .photo-destination .destination-description p {
+  margin-bottom: 20px;
+}
+
+.contact-heading {
+  margin-bottom: 30px;
+}
+
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: #ede6e6;
+  padding: 20px 80px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+@media (max-width: 1200px) {
+  .contact {
+    background-color: #65cb77;
+  }
+}
+@media (min-width: 600px) {
+  .contact {
+    background-color: #ede6e6;
+  }
+}
+.contact input[type=text],
+.contact select,
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.contact label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+.contact input[type=submit] {
+  background-color: #65cb77;
+  color: #f5f3ed;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+  margin-top: 20px;
+}
+.contact input[type=submit]:hover {
+  color: #f5f5ed;
+  background-color: #0f0e0e;
+}
+.contact .contact-location iframe {
+  border-color: #0f0e0e;
+  border-radius: 8px;
+}
+@media (max-width: 600px) {
+  .contact .contact-location iframe .contact-section,
+  .contact .contact-location iframe .contact-location {
+    padding: 15px;
+  }
+  .contact .contact-location iframe .contact-location iframe {
+    height: 150px;
+  }
+}
+
+h1 {
+  color: #0f0e0e;
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 2em;
+}
+
+p {
+  font-size: 1em;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: #ede6e6;
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 10px;
+  margin-bottom: 30px;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+button {
+  color: #f5f3ed;
+  font-weight: 600;
+  font-size: 0.8em;
+  background-color: #65cb77;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 0.85em;
+}
+button:hover {
+  color: #0f0e2e;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+h2::before {
+  content: "🌳";
+}
+
+footer {
+  background-color: #65cb77;
+  color: #f5f3ed;
+  padding: 30px;
+  width: 100%;
+}
+footer p {
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */
